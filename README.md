@@ -1,4 +1,4 @@
-# **Web Server In C - Saranai Server.**
+# **Web Server en C - "Saranai Server".**
 # Telemática. 
 ## EAFIT - Medellin, Antiquia, 2023-I.
 
@@ -12,7 +12,7 @@ servidor web.
 
 Integrantes del equipo de trabajo:
 
-- Daniel González
+- Daniel González Bernal
 - Sara Rodríguez Velásquez
 - Jorge Alfredo Villarreal
 
