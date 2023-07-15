@@ -1,0 +1,1 @@
+All server content must be on this folder (Webpages, multimedia files, etc). Each webpage must have his own folder to avoid bugs.
