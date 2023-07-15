@@ -1,6 +1,6 @@
 # **Web Server en C - "Saranai Server".**
 # Telemática. 
-## EAFIT - Medellin, Antiquia, 2023-I.
+## UNIVERSIDAD EAFIT - Medellin, Antiquia, 2023-I.
 
 # **Descripción del Proyecto:**
 En este proyecto se explora la aplicación de la capa de aplicación de la arquitectura
