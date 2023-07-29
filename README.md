@@ -1,16 +1,13 @@
-# **Web Server en C - "Saranai Server".**
-# Telemática. 
+# ** C Web Server - "Saranai Server".**
+# Telematics -  
 ## UNIVERSIDAD EAFIT - Medellin, Antiquia, 2023-I.
 
-# **Descripción del Proyecto:**
-En este proyecto se explora la aplicación de la capa de aplicación de la arquitectura
-TCP/IP. Al respecto, se abordará desde el estudio del protocolo HTTP desde una
-perspectiva de programación en red. Para esto se desarrollará e implementará un
-servidor web.
+# **Project Description:**
+This project explores the application layer of the TCP/IP architecture. It will focus on
+studying the HTTP protocol from a networking programming perspective and will involve the
+development and implementation of a web server.
 
-**Integrantes**
-
-Integrantes del equipo de trabajo:
+**Team Members:**
 
 - Daniel González Bernal
 - Sara Rodríguez Velásquez
@@ -20,29 +17,26 @@ Integrantes del equipo de trabajo:
 
 # **Tabla de contenido**
 
-1. [Introducción](#introducción)
+1. [Introduction](#Introduction)
 2. [Desarrollo](#desarrollo)
 3. [Conclusiones](#conclusiones)
 4. [Referencias](#referencias)
 
 ******
 
-# **Introducción**
+# **Introduction**
 
-En este proyecto se explora la aplicación de la capa de aplicación de la arquitectura
-TCP/IP. Al respecto, se abordará desde el estudio del protocolo HTTP desde una
-perspectiva de programación en red. Para esto se desarrollará e implementará un
-servidor web.
+This project explores the application layer of the TCP/IP architecture. Specifically, it will focus on studying
+the HTTP protocol from a networking programming perspective. The main objective is to develop and implement a web server.
 
-En términos generales la función principal de un servidor web es la entrega de recursos
-(páginas html, imágenes, archivos de estilos, etc) web a un cliente que lo solicita (p.ej.,
-web browser). Para esto, tanto el cliente como el servidor se comunican a través de un
-mismo protocolo que es HTTP.
+In general terms, the primary function of a web server is to deliver web resources (such as HTML pages, images, style files, etc.)
+to a client that requests them (e.g., a web browser). For this purpose, both the client and the server communicate through the HTTP protocol.
 
-De esta forma el objetivo final que se trabaja en este laboratorio es desarrollar e implementar un servidor web denominado
-Telematics Web Server – (TWS)) que soporte la versión HTTP/1.1. 
+The ultimate goal of this laboratory work is to develop and implement a web server named Telematics Web Server (TWS) that supports the HTTP/1.1 version. 
+
 
 ******
+
 # **Desarrollo**
 
 ## Descripción del código:
