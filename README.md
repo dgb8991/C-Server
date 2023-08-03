@@ -15,10 +15,10 @@ development and implementation of a web server.
 
 ******
 
-# **Tabla de contenido**
+# **Index:**
 
 1. [Introduction](#Introduction)
-2. [Desarrollo](#desarrollo)
+2. [Development](#Development)
 3. [Conclusiones](#conclusiones)
 4. [Referencias](#referencias)
 
@@ -37,23 +37,18 @@ The ultimate goal of this laboratory work is to develop and implement a web serv
 
 ******
 
-# **Desarrollo**
+# **Development**
 
-## Descripción del código:
+## Code Description:
 
-Actualmente se tiene un códifo de servidor web en C que acepta solicitudes HTTP. Recibe solicitudes HTTP de clientes y devuelve una respuesta HTTP en función de la solicitud. El servidor es un programa de consola que se ejecuta en un bucle infinito y espera nuevas conexiones de clientes. Se utiliza el protocolo de socket para establecer conexiones entre el cliente y el servidor. Se utiliza la biblioteca pthread.h para crear un hilo para cada conexión cliente. El servidor es capaz de manejar varias conexiones de manera simultánea.
+This code is a web server write in C that accepts HTTP requests. It receives HTTP requests from clients and returns an HTTP response based on the request. The server is a console program that runs in an infinite loop and waits for new client connections. The socket protocol is used to establish connections between the client and the server. The pthread.h library is used to create a thread for each client connection. The server is capable of handling multiple connections simultaneously.
 
-La solicitud HTTP se analiza utilizando la función parse_request_line que analiza la línea de solicitud HTTP para determinar el método, la ruta y el host. El servidor admite los métodos GET, POST y HEAD. Si se recibe una solicitud con un método diferente o una solicitud mal escrita, se devuelve un código de respuesta HTTP 400 Bad Request.
+The HTTP request is parsed using the parse_request_line function, which analyzes the HTTP request line to determine the method, path, and host. The server supports the GET, POST, and HEAD methods. If a request with a different method or a poorly written request is received, it returns an HTTP 400 Bad Request response code.
 
-El servidor tiene un registro (logger) que se guarda en un archivo de texto formato txt, este se especifica en el argumento de línea de comando. La función logger registra cada solicitud, posteo y respuesta HTTP en el archivo de registro con la marca de tiempo correspondiente.
+The server has a logger that is saved in a text file in txt format, which is specified as a command-line argument. The logger function records each HTTP request, post, and response in the log file with the corresponding timestamp.
 
-## **Setup**
 
-1. Prender un [WSL de ubuntu.](https://learn.microsoft.com/es-mx/windows/wsl/install) y [WSL en vscode.](https://code.visualstudio.com/docs/remote/wsl)
-2. Desde wsl se usa con [Meson.](https://mesonbuild.com/SimpleStart.html)
-3. Sino, CMakeTools.
-
-### **Detalles**
+### **Details**
 
 En el proyecto se usan principalmente 3 herramientas:
 
