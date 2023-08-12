@@ -19,8 +19,8 @@ development and implementation of a web server.
 
 1. [Introduction](#Introduction)
 2. [Development](#Development)
-3. [Conclusiones](#conclusiones)
-4. [Referencias](#referencias)
+3. [Conclusions](#conclusions)
+4. [References](#references)
 
 ******
 
@@ -48,126 +48,65 @@ The HTTP request is parsed using the parse_request_line function, which analyzes
 The server has a logger that is saved in a text file in txt format, which is specified as a command-line argument. The logger function records each HTTP request, post, and response in the log file with the corresponding timestamp.
 
 
-### **Details**
+## **Glossary and Terminology**
 
-En el proyecto se usan principalmente 3 herramientas:
-
-|Compilador|Build|Debugger|
-|---|---|---|
-|gcc|meson|gdb|
-
-#### Proceso de verificación e instalación:
-
-Debian, Ubuntu y derivativos:
-
-Para instalar gcc y gdb
-
-``` bash
-sudo apt install build-essential gdb
-sudo apt install meson ninja-build
-```
-Para instalar meson y ninja
-```
-
-``` bash
-sudo apt install meson ninja-build
-```
-
-Para iniciar un projecto en el directorio actual
-
-``` bash
-meson init --name server --build
-```
-
-Para compilar y probar
-
-``` bash
-meson compile -C builddir
-meson test -C builddir
-```
-
-Debuggear
-
-``` bash
-gdb build/server
-```
-
-Algunos comandos útiles de GDB incluyen break, run, next, step, print, backtrace, finish, continue, watch, entre otros.
-
-Comando para iniciar la aplicación
-
-``` bash
-./build/server
-./build/server PORT LOGFILE DOCROOT
-```
-
-
-## **Glosario y Terminología**
-
-En esta sección se describirá la terminología util para la realización del proyecto.
+This section will describe the terminology used for the project.
 
 ### Three way Handshake
 
-Es un proceso de tres pasos que se realiza al comienzo de una conexión TCP, para asegurar que ambos dispositivos estén sincronizados y listos para la transmisión de datos.
+It is a three-step process carried out at the beginning of a TCP connection to ensure that both devices are synchronized and ready for data transmission.
 
 - C ->syn=1                    S
 - C <-ack=1; syn=1             S
 - C ->ack=1                    S
 
-### Estado de la conexión
+### Connection State
 
-Connection: Keep alive ; Se prioriza que no sean conecciones shortlived, que se puedan hacer varios requests de manera conjunta.
+Connection: Keep alive; Prioritizes not having short-lived connections, enabling multiple requests to be made together.
 
-El servidor web y el cliente negocian si desean mantener la conexión abierta mediante el uso de la cabecera "Connection" en las solicitudes HTTP y las respuestas correspondientes. 
+The web server and the client negotiate whether to keep the connection open by using the "Connection" header in HTTP requests and the corresponding responses. 
 
 ### - bind
-La función bind en programación de redes en C se utiliza para asociar una dirección IP y un número de puerto a un socket. Es una llamada al sistema que asigna una dirección local a un socket identificado por su descriptor de archivo.
+The bind function in C network programming is used to associate an IP address and a port number with a socket. It's a system call that assigns a local address to a socket identified by its file descriptor.
 
 ### - listen
-La función listen en programación de redes en C se utiliza para indicar al sistema operativo que el socket está listo para aceptar conexiones entrantes. Esta llamada al sistema especifica el número máximo de conexiones pendientes que se pueden encolar para el socket.
+The listen function in C network programming is used to inform the operating system that the socket is ready to accept incoming connections. This system call specifies the maximum number of pending connections that can be queued for the socket.
 
 ### - accept
-La función accept en programación de redes en C se utiliza para aceptar una conexión entrante en un socket previamente configurado para escuchar. Esta llamada al sistema devuelve un nuevo descriptor de archivo que representa la conexión aceptada.
+The accept function in C network programming is used to accept an incoming connection on a socket previously configured to listen. This system call returns a new file descriptor representing the accepted connection.
 
 ### - connect()
-La función connect() en programación de redes en C se utiliza para establecer una conexión con otro host a través de una red. Esta llamada al sistema se utiliza en el lado del cliente para conectar un socket de cliente a un socket de servidor.
+The connect() function in C network programming is used to establish a connection with another host over a network. This system call is used on the client side to connect a client socket to a server socket.
 
 ### - recv()
-La función recv() en programación de redes en C se utiliza para recibir datos a través de un socket. Esta llamada al sistema recibe los datos enviados por el otro extremo de la conexión y los almacena en un búfer especificado.
+The recv() function in C network programming is used to receive data over a socket. This system call receives the data sent by the other end of the connection and stores it in a specified buffer.
 
 ### - sockaddr_in
-sockaddr_in es una estructura de datos en programación de redes en C que se utiliza para representar una dirección IP y un número de puerto en el protocolo IPv4. Esta estructura se utiliza con otras funciones de socket para asignar direcciones y puertos a los sockets.
+sockaddr_in is a data structure in C network programming used to represent an IP address and a port number in the IPv4 protocol. This structure is used with other socket functions to assign addresses and ports to sockets.
 
 ### - strstr
-La función strstr en programación de C se utiliza para encontrar la primera aparición de una subcadena en una cadena. Esta función devuelve un puntero al primer carácter de la subcadena encontrada o NULL si la subcadena no se encuentra en la cadena.
+The strstr function in C programming is used to find the first occurrence of a substring in a string. This function returns a pointer to the first character of the found substring or NULL if the substring is not found in the string.
 
 ### - memcpy
-La función memcpy en programación de C se utiliza para copiar un bloque de memoria de un lugar a otro. Esta función toma dos punteros como argumentos, el primer puntero es el destino donde se copiará el bloque de memoria y el segundo puntero es el origen del bloque de memoria que se copiará.
+The memcpy function in C programming is used to copy a block of memory from one location to another. This function takes two pointers as arguments: the first pointer is the destination where the block of memory will be copied, and the second pointer is the source of the block of memory to be copied.
 
 
 ******
 
-# **Conclusiones**
- Al inicio de este proyecto se planteó la pregunta si hacerlo en python o en C, e inclusive se hizo un pequeño prototipo en Python y se compararon ambos lenguajes de programación.
+# **Conclusions**
+At the beginning of this project, the question of whether to implement it in Python or C was raised. A small prototype was even developed in Python, and both programming languages were compared.
 
-Como modo de reto se aceptó realizarlo en C, y aunque el nivel de dificultad creció en gran medida con esta elección se pudo evidenciar la velocidad y manejo de recursos mas eficiente que proporciona C respecto al otro lenguaje. Esto fue un aprendizje inesperado y muy satisfactorio.
+As a challenge, the decision was made to implement it in C. Despite the significantly increased level of difficulty with this choice, the speed and more efficient resource management provided by C in comparison to the other language became evident. This unexpected experience was very satisfying.
 
-Se pudo apreciar en gran medida tambien la complejidad de algo que se da por sentado para la gran mayoria del mundo, Internet. Se pudo evidenciar lo compleja que es cada petición y respuesta, y se adquirió un mayor aprecio y admiración por los robustos sistemas que soportan nuestras acciones en la red día a día.
+The complexity of something that is taken for granted by most of the world, the Internet, was also greatly appreciated. The intricate nature of each request and response was highlighted, fostering a greater understanding and admiration for the robust systems that support our online actions day by day.
 
-Solo podemos teorizar sobre lo robustos que son sistemas como las plataformas bancarias, plataformas de streaming o servicios de pago, y que tan delicadas son las operaciones que realizan los servidores que las soportan. 
+We can only theorize about the robustness of systems like banking platforms, streaming services, or payment gateways, and how delicate the operations performed by their supporting servers are.
 
-Se ha aprendido en el desarrollo de este proyecto una gran infinididad de conocimientos que aportan positivamente al entendimiento de los sistemas de telecomunicaciones.
+In the development of this project, a myriad of knowledge was gained, contributing positively to the comprehension of telecommunications systems.
 
 
-# **Referencias**
+# **References**
 
-Se leyeron varios articulos y se visitaron varios archivos como referentes para el proyecto, los cuales se listan a continuación.
-
-### Webgrafia y Bibliografia:
-
-Video Tutorial "I made a web server in C like a true sigma". Imran Rahman. Disponible en youtube: https://www.youtube.com/watch?v=cEH_ipqHbUw&ab_channel=ImranRahman 
-
-#### Referentes:
 - HTTP Semantics. Disponible en: https://www.rfc-editor.org/rfc/rfc9110.html
 
 - Hypertext Transfer Protocol -- HTTP/1.1 . Dispoible en: https://datatracker.ietf.org/doc/rfc2616/
@@ -179,9 +118,6 @@ Video Tutorial "I made a web server in C like a true sigma". Imran Rahman. Dispo
 - Ejemplo de proyecto de servidor en C. Blooming Institute of Technology. Repositorio en Github. Disponible en: https://github.com/bloominstituteoftechnology/C-Web-Server 
 
 - Información impartida por el docente en clase. Curso de telemática, Universidad EAFIT 2023-1. 
-
-
-#### Fuentes de recursos web:
 
 - Formato de la página 404. Por Piotr Galor. Codepen. Disponible en: https://codepen.io/pgalor/pen/OeRWJQ 
 
